@@ -1,0 +1,72 @@
+.image-upload > input
+{
+    display: none !important;
+    font-weight: normal !important;
+
+}
+
+.image-upload img
+{
+    width: 20px !important;
+    cursor: pointer !important;
+}
+
+/*!* CSS REQUIRED *!*/
+/*.state-icon {*/
+    /*left: -5px;*/
+/*}*/
+/*.list-group-item-primary {*/
+    /*color: rgb(255, 255, 255);*/
+    /*background-color: rgb(66, 139, 202);*/
+/*}*/
+
+/*!* DEMO ONLY - REMOVES UNWANTED MARGIN *!*/
+/*.well .list-group {*/
+    /*margin-bottom: 0px;*/
+/*}*/
+
+/*.btn-file {*/
+    /*position: relative;*/
+    /*overflow: hidden;*/
+/*}*/
+/*.btn-file input[type=file] {*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*right: 0;*/
+    /*min-width: 100%;*/
+    /*min-height: 100%;*/
+    /*font-size: 100px;*/
+    /*text-align: right;*/
+    /*filter: alpha(opacity=0);*/
+    /*opacity: 0;*/
+    /*outline: none;*/
+    /*background: white;*/
+    /*cursor: inherit;*/
+    /*display: block;*/
+/*}*/
+
+/*.checkboxdemoSelectAll .demo-legend {*/
+    /*color: #3F51B5; }*/
+
+/*.checkboxdemoSelectAll .demo-fieldset {*/
+    /*border-style: solid;*/
+    /*border-width: 1px;*/
+    /*height: 100%; }*/
+
+/*.checkboxdemoSelectAll .demo-select-all-checkboxes {*/
+    /*padding-left: 30px; }*/
+
+/*.jumbotron input{*/
+    /*justify-content: space-between;*/
+    /*!*position: absolute;*!*/
+    /*!*text-align: center;*!*/
+    /*!*bottom: -6px;*!*/
+    /*!*left: -6px;*!*/
+    /*!*padding: 8px 8px 1px 3px;*!*/
+    /*!*border-left: none;*!*/
+    /*!*border-bottom: none;*!*/
+    /*!*border-right: 1px solid #8a6d3b;*!*/
+    /*!*border-top: 1px solid #8a6d3b;*!*/
+    /*!*border-top-right-radius: 24px;*!*/
+    /*!*font-size: 12px;*!*/
+/*}*/
