@@ -31,6 +31,7 @@ const METADATA = webpackMerge(commonConfig({env: ENV}).metadata, {
 
 
 const DllBundlesPlugin = require('webpack-dll-bundles-plugin').DllBundlesPlugin;
+const ProvidePlugin = require('webpack/lib/ProvidePlugin');
 
 /**
  * Webpack configuration
@@ -138,8 +139,13 @@ module.exports = function (options) {
         'process.env': {
           'ENV': JSON.stringify(METADATA.ENV),
           'NODE_ENV': JSON.stringify(METADATA.ENV),
-          'HMR': METADATA.HMR,
+          'HMR': METADATA.HMR
         }
+      }),
+
+      new ProvidePlugin({
+        "window.jQuery": "jquery",
+        Hammer: "hammerjs/hammer"
       }),
 
       new DllBundlesPlugin({
@@ -164,7 +170,7 @@ module.exports = function (options) {
             '@angular/http',
             '@angular/router',
             '@angularclass/hmr',
-            'rxjs',
+            'rxjs'
           ]
         },
         dllDir: helpers.root('dll'),

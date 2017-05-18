@@ -4,6 +4,7 @@ import {
 } from '@angular/core';
 
 import {TaskService} from './task.service';
+import {$} from "protractor";
 
 @Component({
   /**
@@ -21,6 +22,7 @@ import {TaskService} from './task.service';
   templateUrl: './task.component.html'
 })
 export class TaskComponent implements OnInit {
+  private tasks: any;
   /**
    * Set our default values
    */
@@ -37,10 +39,12 @@ export class TaskComponent implements OnInit {
      * this.title.getData().subscribe(data => this.data = data);
      */
   }
+
   private getTasks() {
     this.taskService.getTasks()
       .subscribe((tasks) => {
-        console.log(tasks.json());
+        this.tasks = tasks.json();
       });
   }
+
 }
