@@ -121,6 +121,10 @@ module.exports = function (options) {
     },
 
     plugins: [
+      new ProvidePlugin({
+        "window.jQuery": "jquery",
+        Hammer: "hammerjs/hammer"
+      }),
 
       /**
        * Plugin: DefinePlugin
@@ -141,11 +145,6 @@ module.exports = function (options) {
           'NODE_ENV': JSON.stringify(METADATA.ENV),
           'HMR': METADATA.HMR
         }
-      }),
-
-      new ProvidePlugin({
-        "window.jQuery": "jquery",
-        Hammer: "hammerjs/hammer"
       }),
 
       new DllBundlesPlugin({

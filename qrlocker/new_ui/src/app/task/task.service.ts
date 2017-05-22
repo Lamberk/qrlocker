@@ -19,12 +19,6 @@ export class TaskService {
   ) {
   }
 
-  // public getTasks(): Observable<Task> {
-  //   return this.http.get(this.taskUrl);
-  //
-  //    // .subscribe((tasks) => this.tasks = tasks);
-  // }
-
   public getTasks() {
     return this.http.get(this.tasksUrl);
   }

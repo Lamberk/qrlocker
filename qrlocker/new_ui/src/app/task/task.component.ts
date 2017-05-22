@@ -4,7 +4,6 @@ import {
 } from '@angular/core';
 
 import {TaskService} from './task.service';
-import {$} from "protractor";
 
 @Component({
   /**

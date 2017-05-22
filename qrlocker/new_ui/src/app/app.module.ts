@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
-import {HttpModule} from '@angular/http';
-
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { HttpModule } from '@angular/http';
 import 'materialize-css';
 import { MaterializeModule } from 'angular2-materialize';
 
@@ -31,19 +30,22 @@ import { AppState, InternalStateType } from './app.service';
 import { TaskComponent } from './task';
 import { LoginComponent } from './login';
 import { NoContentComponent } from './no-content';
+import {QrComponent} from './qr/qr.component';
 
 import '../styles/styles.scss';
 import '../styles/headings.css';
 import {AuthService} from './login/auth/auth.service';
 import {TaskService} from './task/task.service';
 import {AuthModule} from './login/auth/auth.module';
+import {QrService} from './qr/qr.service';
 
 // Application wide providers
 const APP_PROVIDERS = [
   ...APP_RESOLVER_PROVIDERS,
   AppState,
   AuthService,
-  TaskService
+  TaskService,
+  QrService
 ];
 
 type StoreType = {
@@ -61,6 +63,7 @@ type StoreType = {
     AppComponent,
     LoginComponent,
     TaskComponent,
+    QrComponent,
     NoContentComponent,
   ],
   /**
@@ -69,8 +72,10 @@ type StoreType = {
   imports: [
     AuthModule,
     BrowserModule,
-    FormsModule,
     HttpModule,
+    MaterializeModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules })
   ],
   /**
